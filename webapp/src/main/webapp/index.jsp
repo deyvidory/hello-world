@@ -1,12 +1,27 @@
-<form action="/action_page.php">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value="John"><br>
-  <br>
+<!-- Form which will send a GET request to the current URL -->
+<form method="get">
+  <label>
+    Name:
+    <input name="submitted-name" autocomplete="name" />
+  </label>
+  <button>Save</button>
+</form>
 
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value="Doe"><br><br>
-  <br>
+<!-- Form which will send a POST request to the current URL -->
+<form method="post">
+  <label>
+    Name:
+    <input name="submitted-name" autocomplete="name" />
+  </label>
+  <button>Save</button>
+</form>
 
-  <input type="submit" value="Submit">
+<!-- Form with fieldset, legend, and label -->
+<form method="post">
+  <fieldset>
+    <legend>Do you agree to the terms?</legend>
+    <label><input type="radio" name="radio" value="yes" /> Yes</label>
+    <label><input type="radio" name="radio" value="no" /> No</label>
+  </fieldset>
 </form>
 
