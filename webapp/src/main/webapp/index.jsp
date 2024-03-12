@@ -45,7 +45,7 @@
             <li><a href="https://www.jenkins.io/doc/book/pipeline/" class="link" target="_blank">Jenkins Pipeline Documentation</a></li>
             <li><a href="https://www.jenkins.io/doc/book/blueocean/" class="link" target="_blank">Jenkins Blue Ocean Documentation</a></li>
         </ul>
-        <p>Start exploring Jenkins, and happy learning YEAHHH!</p>
+        <p>Start exploring Jenkins, and happy learning YEAHHH! MABN </p>
     </div>
 </body>
 </html>
