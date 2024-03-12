@@ -11,7 +11,7 @@
 <form method="post">
   <label>
     Name:
-    <input name="submitted-surnamename" autocomplete="name" />
+    <input name="submitted-surnamename-dude" autocomplete="name" />
   </label>
   <button>Save</button>
 </form>
