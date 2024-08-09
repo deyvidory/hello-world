@@ -1,39 +1,17 @@
-name: check build
+name: Super-Linter
 
-on:
-  push:
-    branches:
-      - [main]
-  pull_request:
-    branches:
-      - [main]
+on: push
 
 jobs:
-  test-build:
+  super-lint:
+    name: Lint code base
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node: ['14']
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node }}
-      - run: npm install
-      - run: npm run build
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-  check-code:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node: ['14']
-    name: Prettier on Node ${{ matrix.node }}
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node }}
-      - run: npm install
-      - run: npm run prettier:check
-      - run: npm run eslint --ext .ts ./src
-      - run: npm run test
+      - name: Run Super-Linter
+        uses: github/super-linter@v4
+        env:
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
